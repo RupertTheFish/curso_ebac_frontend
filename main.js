@@ -1,25 +1,21 @@
 $(document).ready(function(){
-    
-    $('#botao-resetar').click(function(){
-        $('ul').val('');
-    });
-
     $('form').on('submit', function(e){
-        e.preventDefault();
-        const novaTarefa = $('#nome-tarefa').val();
+        e.preventDefault(); //Previne o comportamento padrão de atualizar do submit.
+
+        const novaTarefa = $('#nome-tarefa').val(); //Atribui o valor do campo de adicionar tarefa
         const novoItem = $(`
             <li>
-                <a href="#" id="check">${novaTarefa}</a>
+                <a href="#" class="#">${novaTarefa}</a>
             </li>
             <br>
-        `);
-        $(novoItem).appendTo('ul');
+        `); // Cria um novo elemento na lista de tarefas
+        $(novoItem).appendTo('ol');
         $(novoItem).fadeIn(1000);
-        $('#nome-tarefa').val('');
+        $('#nome-tarefa').val('');// Reseta o Input
     })
-
-    $('ul').on('click', function(){
-        $('ul li a').css({'text-decoration': 'line-through'});
+    //Executa a mudança de classe do elemento específico da lista
+    $('#task-list').on('click', 'li', function(){
+        $(this).toggleClass('completo');
     })
 })
 

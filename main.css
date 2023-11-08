@@ -46,24 +46,29 @@ button{
     background-color: red;
 }
 
-ul{
+ol{
     display: list-item;
     justify-content: center;
+    list-style: none;
 }
 
-ul li{
-    list-style: Circle;
+ol li{
     position: relative;
     cursor: pointer;
     text-align: center;
 }
 
-ul li a{
+ol li a{
     color: black;
     text-decoration: none;
 }
 
-ul li:hover #nome-tarefa{
+.completo{
+    color: red;
+    text-decoration: line-through
+}
+
+ol li:hover #nome-tarefa{
     opacity: 1;
     cursor: pointer;
 }
