@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#contato, form{
+    padding: 24px 0;
+    text-align: center;
+}
+
+form h2{
+    margin-bottom: 16px;
+    text-align: center;
+}
